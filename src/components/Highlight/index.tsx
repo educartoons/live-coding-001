@@ -1,5 +1,5 @@
 import React from 'react'
-import {Intervals, Interval} from '../utils'
+import {Intervals, Interval} from '../../utils'
 
 interface IProps{
   log: string;
@@ -60,7 +60,6 @@ function highlightWords(log: string, regexes: RegExp[]){
 
 
 const Highlight = (props: IProps) => {
-  console.log(highlightWords(props.log, props.regexes));
   return(
     <div dangerouslySetInnerHTML={{
       __html: highlightWords(props.log, props.regexes)

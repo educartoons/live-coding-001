@@ -1,6 +1,8 @@
 import React from 'react';
 import Highlight from '../Highlight';
 
+import HighlightStyled from '../../styles/HighlightStyled'
+
 interface IProps{
   log: string;
   regexes: RegExp[]
@@ -8,11 +10,9 @@ interface IProps{
 
 const Log = (props: IProps) => {
   return (
-  <div>
-    {
-      <Highlight log={props.log} regexes={props.regexes}/>
-    }
-  </div>
+  <HighlightStyled>
+    <Highlight log={props.log} regexes={props.regexes}/>
+  </HighlightStyled>
   )
 }
 
